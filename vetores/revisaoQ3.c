@@ -17,7 +17,7 @@ int main(){
     {
         printf("Vacinas: %d\n", vacinas[idx]);
     }
-    
+    tainha
 
 
 }
