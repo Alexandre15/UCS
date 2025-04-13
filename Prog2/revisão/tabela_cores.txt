@@ -1,0 +1,48 @@
+// Estilos
+"\033[0m"   // Resetar tudo
+"\033[1m"   // Negrito
+"\033[2m"   // Escurecido
+"\033[3m"   // Itálico
+"\033[4m"   // Sublinhado
+"\033[7m"   // Inverter cores (negativo)
+"\033[8m"   // Invisível
+
+// Cores normais
+"\033[30m"  // Preto
+"\033[31m"  // Vermelho
+"\033[32m"  // Verde
+"\033[33m"  // Amarelo
+"\033[34m"  // Azul
+"\033[35m"  // Magenta / Roxo
+"\033[36m"  // Ciano
+"\033[37m"  // Branco
+
+// Cores brilhantes (negrito/suavemente mais claras)
+"\033[90m"  // Cinza escuro
+"\033[91m"  // Vermelho claro
+"\033[92m"  // Verde claro
+"\033[93m"  // Amarelo claro
+"\033[94m"  // Azul claro
+"\033[95m"  // Magenta claro
+"\033[96m"  // Ciano claro
+"\033[97m"  // Branco brilhante
+
+// Fundo normal
+"\033[40m"  // Fundo preto
+"\033[41m"  // Fundo vermelho
+"\033[42m"  // Fundo verde
+"\033[43m"  // Fundo amarelo
+"\033[44m"  // Fundo azul
+"\033[45m"  // Fundo magenta
+"\033[46m"  // Fundo ciano
+"\033[47m"  // Fundo branco
+
+// Fundo brilhante
+"\033[100m" // Fundo cinza escuro
+"\033[101m" // Fundo vermelho claro
+"\033[102m" // Fundo verde claro
+"\033[103m" // Fundo amarelo claro
+"\033[104m" // Fundo azul claro
+"\033[105m" // Fundo magenta claro
+"\033[106m" // Fundo ciano claro
+"\033[107m" // Fundo branco brilhante
