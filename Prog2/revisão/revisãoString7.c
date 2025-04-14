@@ -2,39 +2,20 @@
 #include <string.h>
 #include <ctype.h>
 
-int palindromo(char *palavra){
+int int2str(int n, char *str){
 
-    int inicio = 0;
-    int fim = strlen(palavra) - 1;
-
-    while (inicio < fim)
-    {
-        if (tolower(palavra[inicio]) != tolower(palavra[fim]))
-        {
-            return 0;
-        }
-        
-        inicio++;
-        fim--;
-    }
-    
-    return 1;
+    sprintf(str, "%d", n);
 }
 
 
 int main(){
 
+    int numero;
     char palavra[10];
 
-    printf("Digite uma palavra: ");
-    scanf("%s", palavra);
+    printf("Digite um numero: ");
+    scanf("%d", &numero);
 
-    if (palindromo(palavra) == 1)
-    {
-        printf("E palindromo");
-    }
-    else{
-        printf("Nao e palindromo");
-    }
-    
+    int2str(numero, palavra);
+    printf("%s...\n", palavra);
 }
