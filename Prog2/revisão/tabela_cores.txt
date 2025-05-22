@@ -46,3 +46,14 @@
 "\033[105m" // Fundo magenta claro
 "\033[106m" // Fundo ciano claro
 "\033[107m" // Fundo branco brilhante
+/*
+    for (i = 0, j=strlen(palavra)-1; i <= j; i++, j--)
+    {
+        palavraSort[cont++] = palavra[i];
+        if (i != j)
+        {
+            palavraSort[cont++] = palavra[j];
+        }
+        
+    }
+*/ 
