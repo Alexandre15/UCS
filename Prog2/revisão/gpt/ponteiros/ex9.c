@@ -17,6 +17,11 @@ Imprima:
 */
 
 int main(){
+    int x = 7;
+    int *p = &x;
+    int **pp = &p;
 
-    
+    printf("Valor usando x: %d\n", x);
+    printf("Valor usando *p: %d\n", *p);
+    printf("Valor usando **pp: %d\n", **pp);
 }
