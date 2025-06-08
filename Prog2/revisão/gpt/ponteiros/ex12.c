@@ -21,6 +21,12 @@ Imprima x usando:
 */
 
 int main(){
+    int x = 100;
+    int *p = &x;
+    int **pp = &p;
 
+    printf("Usando x: %d\n", x);
+    printf("Usando *p: %d\n", *p);
+    printf("Usando **pp: %d\n", **pp);
     
 }
