@@ -29,5 +29,5 @@ int main(){
     char palavra[] = "lalaL";
     char *p = palavra;
 
-    printf("Palindromo: %d", palindromo(p));
+    printf("Palindromo: %d ( %s )", palindromo(p), palavra);
 }
