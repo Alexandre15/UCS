@@ -31,6 +31,6 @@ while (fscanf(arq, "%f %f %f", &n1, &n2, &n3) == 3)
     soma = n1 + n2 + n3;
     printf("%.2f | %.2f | %.2f -> %.2f\n", n1, n2, n3, soma);
 }
-
+fclose(arq);
 
 }

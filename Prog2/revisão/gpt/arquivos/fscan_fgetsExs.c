@@ -46,4 +46,5 @@ int main(){
         }
         
     }
+    fclose(arq);
 }

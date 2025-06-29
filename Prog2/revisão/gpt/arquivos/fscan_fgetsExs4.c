@@ -27,5 +27,5 @@ while(fscanf(arq, "%s %f", nome, &nota) == 2)
 {
     printf("%s -> %.1f\n", nome, nota);
 }
-
+fclose(arq);
 }

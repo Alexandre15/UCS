@@ -31,5 +31,5 @@ while (fgets(nome, sizeof(nome), arq) != NULL)
     printf("%s ( %d caracteres )\n", nome, cont);
 }
 printf("Conta os espacos entre nome e sobrenome!");
-
+fclose(arq);
 }
