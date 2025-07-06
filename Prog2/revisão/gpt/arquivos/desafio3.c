@@ -9,7 +9,8 @@ typedef struct{
 } Pessoa;
 
 int main(){
-    int i, quantidade, memoria = 0;
+    int i, quantidade, memoria = 0, memoria2 = 0;
+    float media;
     char buffer[100];
 
     printf("Quantas pessoas deseja cadastrar: ");
@@ -24,19 +25,19 @@ int main(){
     
     for (i = 0; i < quantidade; i++)
     {
-        printf("Nome %d: ", i + 1);
+        printf("\033[91mNome %d: \033[0m\033[92m", i + 1);
         fgets(buffer, sizeof(buffer), stdin);
         buffer[strcspn(buffer, "\n")] = '\0';
 
         p[i].nome = malloc(strlen(buffer) + 1);
         if (p[i].nome == NULL)
         {
-            printf("Erro ao alocar nome.\n");
+            printf("Erro ao alocar nome.\033[0m\n");
             return 1;
         }
         strcpy(p[i].nome, buffer);
 
-        printf("Idade: ");
+        printf("\033[91mIdade: ");
         scanf("%d", &p[i].idade);
         getchar();
 
@@ -45,18 +46,22 @@ int main(){
         p[i].cpf[strcspn(p[i].cpf, "\n")] = '\0';
         getchar();
         memoria += (strlen(p[i].nome) + 1) + 16;
+        memoria2 += sizeof(Pessoa) - sizeof(char*) + strlen(p[i].nome) + 1;
+        media += p[i].idade / (float)quantidade;
 
     }
-    printf("--- Pessoas cadastradas ---\n");
+    printf("\n\033[92m--- Pessoas cadastradas ---\033[0m\n\n");
     for (i = 0; i < quantidade; i++)
     {
-        printf("Nome %d = %s\n", i + 1, p[i].nome);
-        printf("Idade: %d\n", p[i].idade);
-        printf("CPF = %s\n", p[i].cpf);
+        printf("\033[91m%d:\033[0m \033[92m%s | \033[0m", i + 1, p[i].nome);
+        printf("\033[91m%d\033[0m \033[92mAnos | \033[0m", p[i].idade);
+        printf("\033[91mCPF: %s\033[0m\n", p[i].cpf);
         free(p[i].nome);
     }
 
     free(p);
-    printf("Memoria ocupada = %d", memoria);
+    printf("Media de idade: %.2f Anos\n", media);
+    printf("Memoria ocupada = %d bytes", memoria);
+    printf("Memoria2 ocupada = %d bytes", memoria2);
     return 0;
 }
