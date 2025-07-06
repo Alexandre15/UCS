@@ -50,4 +50,7 @@ int main(){
         printf("Nome: %s", f[i].nome);
         printf(" -> Salario: R$%.2f\n", f[i].salario);
     }
+
+    free(f);
+    return 0;
 }
