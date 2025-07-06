@@ -37,8 +37,9 @@ int main(){
     float menor_maior_igual = -1;
     int primeiro = 1;
 
-    while (fread(&valor, sizeof(float), 1, arq) == 1)
+    while (fread(&valor, sizeof(float), 1, arq) == 1) //&valor = Ponteiro para a área de memória onde os dados lidos serão armazenados. Tamanho de cada elemento que será lido (em bytes). Ex: sizeof(float). Quantidade de elementos a serem lidos. Ex: 1, 10, etc. Ponteiro para o arquivo aberto (FILE *) "arq".
     {
+        printf("Valores: %.2f\n", valor);
         if (valor >= media)
         {
             if (primeiro || valor < menor_maior_igual)
