@@ -11,6 +11,7 @@ typedef struct {
 
 int main(){
 
+    Funcionario *f;
     int n, i, j;
 
     FILE *arq = fopen("ex3.txt", "r");
@@ -21,9 +22,15 @@ int main(){
 
     fscanf(arq, "%d\n", &n);
 
-    Funcionario f[n];
+// Alocação dinâmica dessa vez kk
+    f = (Funcionario *) malloc(n * sizeof(Funcionario));
+    if (f == NULL)
+    {
+        printf("Erro ao alocar memoria.\n");
+        return 1;
+    }
+    
 
-    printf("1\n");
     for (i = 0; i < n; i++)
     {
         fgets(f[i].cpf, sizeof(f[i].cpf), arq);
@@ -50,10 +57,11 @@ int main(){
         }
     }
 
-    FILE *out = fopen("saida.txt", "w");
+    FILE *out = fopen("saidaNew.txt", "w");
     if (out == NULL)
     {
         printf("Erro ao criar arquivo de output");
+        free(f);
         return 1;
     }
     
@@ -65,6 +73,7 @@ int main(){
 
     fclose(arq);
     fclose(out);
+    free(f);
 
     printf("Arquivo gerado com sucesso!");
     return 0;
