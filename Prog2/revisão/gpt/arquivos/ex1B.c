@@ -46,16 +46,13 @@ int main(){
             {
                 menor_maior_igual = valor;
                 primeiro = 0;
-            }
-            
+            }   
         }
-        
     }
     
     printf("Media: %.2f\n", media);
     printf("Menor valor >= media: %.2f\n", menor_maior_igual);
 
     fclose(arq);
-    return 0;
-    
+    return 0;    
 }
